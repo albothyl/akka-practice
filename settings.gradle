@@ -1,0 +1,5 @@
+rootProject.name = 'akka-practice'
+include 'akka-host'
+include 'akka-guest'
+include 'refference'
+

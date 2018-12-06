@@ -1,0 +1,29 @@
+ext {
+	akkaVersion = "2.11:2.5.6"
+
+	monadsVersion = "0.4.1"
+	boilerpipeVersion = "1.2.2"
+}
+
+subprojects {
+	group 'eaxmple'
+	version '1.0-SNAPSHOT'
+
+	apply plugin: 'java'
+
+	sourceCompatibility = 1.8
+	
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		compile("com.typesafe.akka:akka-actor_${akkaVersion}")
+		compile("com.typesafe.akka:akka-cluster_${akkaVersion}")
+		compile("com.typesafe.akka:akka-cluster-tools_${akkaVersion}")
+		compile("com.typesafe.akka:akka-cluster-metrics_${akkaVersion}")
+		compile("com.typesafe.akka:akka-slf4j_${akkaVersion}")
+
+		testCompile("junit:junit:4.12")
+	}
+}
